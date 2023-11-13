@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Registrasi Tempat Wisata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+form {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Registrasi Tempat Wisata</h2>
+    <form action="proses_registrasi.php" method="POST">
+        <table>
+            <tr>
+                <td><label for="nama_wisata">Nama Tempat Wisata:</label></td>
+                <td><input type="text" id="nama_wisata" name="nama_wisata" required></td>
+            </tr>
+            <tr>
+                <td><label for="jenis_wisata">Jenis Wisata:</label></td>
+                <td>
+                    <select id="jenis_wisata" name="jenis_wisata" required>
+                        <option value="taman">Taman</option>
+                        <option value="pantai">Pantai</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="kapasitas">Kapasitas (person):</label></td>
+                <td><input type="number" id="kapasitas" name="kapasitas" required></td>
+            </tr>
+            <tr>
+                <td><label for="no_hp">Nomor HP/Telpon:</label></td>
+                <td><input type="tel" id="no_hp" name="no_hp" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="alamat_web">Alamat Web:</label></td>
+                <td><input type="url" id="alamat_web" name="alamat_web" required></td>
+            </tr>
+            <tr>
+                <td><label for="alamat_lengkap">Alamat Lengkap:</label></td>
+                <td><textarea id="alamat_lengkap" name="alamat_lengkap" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="latitude">Latitude:</label></td>
+                <td><input type="text" id="latitude" name="latitude" required></td>
+            </tr>
+            <tr>
+                <td><label for="longitude">Longitude:</label></td>
+                <td><input type="text" id="longitude" name="longitude" required></td>
+            </tr>
+        </table>
+
+        <input type="submit" value="Daftar">
+        <input type="reset" value="Batal">
+    </form>
+</body>
+</html>
